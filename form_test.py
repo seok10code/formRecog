@@ -11,15 +11,15 @@ import requests
 
 
 
-FORM_RECOGNIZER_KEY="879c3234abea403ca50dc047e85051fa"
-FORM_RECOGNIZER_ENDPOINT="https://formtestswsw.cognitiveservices.azure.com/"
+FORM_RECOGNIZER_KEY="87fa"
+FORM_RECOGNIZER_ENDPOINT="https://formtestswsw.com/"
 
 def get_blob_url():
-    STORAGE_CONSTR = "DefaultEndpointsProtocol=https;AccountName=uploadfiletesttestsw;AccountKey=fZZ0DCbO3C3pXAGDHZKzQ+XcXp2OQdl5gc2ysrLTP4deFbZedIMylcggLNpPNcgqEXUXj044eC66+ASttOSzlA==;EndpointSuffix=core.windows.net"
+    STORAGE_CONSTR = "Default"
     SOURCE_NAME = "formcontianer"
     FILE_NAME = "20231201_pdf_to_txt.pdf"
     # FILE_NAME = "test01.pdf"
-    sas="sp=racwdymeop&st=2023-11-28T02:15:13Z&se=2023-12-08T10:15:13Z&spr=https&sv=2022-11-02&sr=b&sig=cAzuKe15FAWNbm%2B%2B3CcdGf6VMg0hgklzhLQFcqUOS3k%3D"
+    sas=""
     container = ContainerClient.from_connection_string(
          conn_str=STORAGE_CONSTR,
          container_name = SOURCE_NAME,
